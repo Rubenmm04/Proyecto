@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-=======
-* {
-    box-sizing: border-box;
-}
->>>>>>> 263bd6c8d4b29ccda9de3d6d99c0bf460ee87fb4
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -15,11 +8,7 @@ header {
     background-image: url('./images/prueba.jpg');
     background-size: cover;
     background-position: center;
-<<<<<<< HEAD
     height: 450px; 
-=======
-    height: 500px; 
->>>>>>> 263bd6c8d4b29ccda9de3d6d99c0bf460ee87fb4
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +60,6 @@ a{
 a:hover{
     text-decoration: underline;
 }
-<<<<<<< HEAD
 main {
     display: flex;
     justify-content: space-between;
@@ -81,8 +69,6 @@ main {
     max-width: 1200px;
     margin: 0 auto; 
 }
-=======
->>>>>>> 263bd6c8d4b29ccda9de3d6d99c0bf460ee87fb4
 
 
 
@@ -94,15 +80,11 @@ main {
 .content{
     margin-left: 40px;
     margin-right: 40px;
-<<<<<<< HEAD
     margin-bottom: 15px;
-=======
->>>>>>> 263bd6c8d4b29ccda9de3d6d99c0bf460ee87fb4
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: column;
-<<<<<<< HEAD
     background-color: #dfdfdf;
     border-radius: 10px;
     padding: 20px;
@@ -110,9 +92,6 @@ main {
 }
 .content h2 {
     text-align: center;
-=======
-
->>>>>>> 263bd6c8d4b29ccda9de3d6d99c0bf460ee87fb4
 }
 .imagen-principal {
     display: block;
@@ -138,7 +117,6 @@ main {
     margin-top: 0;
 }
 .intro{
-<<<<<<< HEAD
     margin-left: 40px;
     margin-right: 40px;
     text-align: justify;
@@ -176,10 +154,4 @@ main {
     padding: 30px;
    
    
-=======
-    margin: 40px;
-    text-align: justify;
-    margin-top: 20px;
-    font-size: 18px;
->>>>>>> 263bd6c8d4b29ccda9de3d6d99c0bf460ee87fb4
 }
