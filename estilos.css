@@ -4,11 +4,12 @@ body {
     margin: 0;
     padding: 0;
 }
+
 header {
     background-image: url('./images/prueba.jpg');
     background-size: cover;
     background-position: center;
-    height: 450px; 
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +17,7 @@ header {
     text-align: center;
     position: relative;
 }
+
 nav {
     text-align: center;
     background-color: #444;
@@ -28,6 +30,7 @@ nav {
     top: 0;
     z-index: 1000;
 }
+
 nav a {
     color: white;
     text-decoration: none;
@@ -35,16 +38,19 @@ nav a {
     padding: 15px;
     border-radius: 10px;
 }
+
 nav a:hover {
     text-decoration: underline;
     background-color: #6e6e6e;
     border-radius: 10px;
 }
+
 section {
     padding: 20px;
     margin: 10px;
     margin-top: 0px;
 }
+
 footer {
     background-color: #333;
     color: white;
@@ -53,42 +59,57 @@ footer {
     bottom: 0;
     width: 100%;
 }
-a{
-    color:cornflowerblue;
+
+a {
+    color: cornflowerblue;
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     text-decoration: underline;
 }
+
 main {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; 
-    gap: 10px; 
+    align-items: flex-start;
+    gap: 10px;
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto; 
+    max-width: 1300px;
+    margin: 0 auto;
 }
+
 h1 {
     text-align: center;
 }
-h4 {
+
+h3 {
     text-align: center;
     padding: 10px;
     background-color: #777777;
     color: white;
     border-radius: 10px;
 }
+
+h4 {
+    text-align: center;
+}
+
 p {
     text-align: justify;
+}
+h2{
+    text-align: center;
+    
 }
 
 
 
 
 
+
 /************************Clases************************/
-.content{
+.content {
     margin-left: 40px;
     margin-right: 40px;
     margin-bottom: 15px;
@@ -101,9 +122,11 @@ p {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 .content h2 {
     text-align: center;
 }
+
 .imagen-principal {
     display: block;
     margin: 0 auto;
@@ -112,12 +135,14 @@ p {
     object-fit: cover;
     border-radius: 10px;
 }
-.texto{
+
+.texto {
     border-radius: 10px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 .texto h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
@@ -127,7 +152,8 @@ p {
     font-size: 1.2em;
     margin-top: 0;
 }
-.intro{
+
+.intro {
     margin-left: 40px;
     margin-right: 40px;
     text-align: justify;
@@ -138,8 +164,9 @@ p {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 .principal {
-    flex: 2; 
+    flex: 2;
     max-width: 65%;
     background-color: #dfdfdf;
     padding: 20px;
@@ -147,7 +174,42 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.fotos-dioses {
+    column-count: 3;
+    column-gap: 40px;
+}
+
+.fotos-dioses p {
+    break-inside: avoid;
+    margin-bottom: 10px;
+}
+
+.fotos-dioses img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.fotos-dioses img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+.fotos-criaturas {
+    column-count: 3;
+    column-gap: 40px;
+}
+
+.fotos-criaturas p {
+    break-inside: avoid;
+    margin-bottom: 10px;
+}
+
 .sidebar {
+    position: static;
     float: right;
     flex: 1;
     max-width: 30%;
@@ -158,11 +220,14 @@ p {
     align-self: flex-start;
     height: 100%;
 }
+
 .pie-pagina {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 30px;
-   
-   
+}
+
+.intro2 {
+    text-align: justify;
 }
