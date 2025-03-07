@@ -69,8 +69,19 @@ main {
     max-width: 1200px;
     margin: 0 auto; 
 }
-
-
+h1 {
+    text-align: center;
+}
+h4 {
+    text-align: center;
+    padding: 10px;
+    background-color: #777777;
+    color: white;
+    border-radius: 10px;
+}
+p {
+    text-align: justify;
+}
 
 
 
