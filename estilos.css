@@ -100,7 +100,7 @@ p {
 }
 h2{
     text-align: center;
-    
+
 }
 
 
@@ -182,7 +182,20 @@ h2{
 .fotos-dioses p {
     break-inside: avoid;
     margin-bottom: 10px;
+    background-color: rgb(212, 212, 212);
+    padding: 20px;
+    border-radius: 20px;
 }
+.fotos-dioses .primero{
+    margin-top: 0px;
+}
+
+
+.fotos-dioses p:hover {
+    background-color: rgb(179, 179, 179);
+    transition: background-color 0.5s;
+}
+
 
 .fotos-dioses img {
     display: block;
@@ -199,13 +212,29 @@ h2{
 }
 
 .fotos-criaturas {
-    column-count: 3;
+    column-count: 2;
     column-gap: 40px;
 }
 
 .fotos-criaturas p {
     break-inside: avoid;
     margin-bottom: 10px;
+}
+.fotos-criaturas p:hover {
+    background-color: rgb(179, 179, 179);
+    transition: background-color 0.5s;
+}
+.fotos-criaturas img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+.fotos-criaturas img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
 }
 
 .sidebar {
