@@ -110,17 +110,16 @@ h2{
 
 /************************Clases************************/
 .content {
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: column;
-    background-color: #dfdfdf;
-    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: space-evenly;
+}
+.content section{
+    max-width: 25%;
 }
 
 .content h2 {
@@ -130,8 +129,8 @@ h2{
 .imagen-principal {
     display: block;
     margin: 0 auto;
-    width: 300px;
-    height: 200px;
+    width: 170px;
+    height: 100px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -255,8 +254,15 @@ h2{
     color: white;
     text-align: center;
     padding: 30px;
+    margin: 0;
 }
 
 .intro2 {
     text-align: justify;
+}
+
+.contenido{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
