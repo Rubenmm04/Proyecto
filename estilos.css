@@ -84,20 +84,19 @@ h1 {
 }
 
 h3 {
+    width: 100%;
     text-align: center;
     padding: 10px;
     background-color: #777777;
     color: white;
     border-radius: 10px;
+    margin-bottom: 0;
 }
 
 h4 {
     text-align: center;
 }
 
-p {
-    text-align: justify;
-}
 h2{
     text-align: center;
 
@@ -129,8 +128,8 @@ h2{
 .imagen-principal {
     display: block;
     margin: 0 auto;
-    width: 170px;
-    height: 100px;
+    width: 300px;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -153,10 +152,8 @@ h2{
 }
 
 .intro {
-    margin-left: 40px;
-    margin-right: 40px;
     text-align: justify;
-    margin-top: 20px;
+    margin-top: 0px;
     font-size: 18px;
     background-color: #dfdfdf;
     border-radius: 10px;
@@ -174,7 +171,7 @@ h2{
 }
 
 .fotos-dioses {
-    column-count: 3;
+    column-count: 2;
     column-gap: 40px;
 }
 
@@ -266,3 +263,9 @@ h2{
     margin: 0 auto;
     padding: 20px;
 }
+.imagenes-grandes {
+    width: 30%;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+}  
