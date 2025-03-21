@@ -238,9 +238,9 @@ h2{
 }
 
 .sidebar {
-    position: static;
+    position: sticky;
+    top: 100px;
     float: right;
-    flex: 1;
     max-width: 30%;
     background-color: #dfdfdf;
     border-radius: 10px;
