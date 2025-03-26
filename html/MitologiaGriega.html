@@ -1,187 +1,490 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mitología del Mundo</title>
-    <link rel="stylesheet" href="./estilos.css">
+  <script src="../assets/js/color-modes.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.122.0">
+  <title>Carousel Template · Bootstrap v5.3</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <link rel="stylesheet" href="./carousel.css">
+  <link rel="stylesheet" href="./carousel.rtl.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./estilos.css">
+
+  <style>
+    .header {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="carousel.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="texto">
-            <h1>Mitología del Mundo</h1>
-            <p>Un viaje a través de los mitos, dioses y héroes de diferentes culturas</p>
+    <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Mitologias del Mundo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Enlaces.html">Link</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
         </div>
-    </header>
-
-    <nav>
-        <a href="./carrusel/index.html">Inicio</a>
-        <a href="./MitologiaGriega.html">Mitología Griega</a>
-        <a href="./MitologiaNordica.html">Mitología Nórdica</a>
-        <a href="./MitologiaEgipcia.html">Mitología Egipcia</a>
-        <a href="./MitologiaRomana.html">Mitología Romana</a>
-        <a href="./MitologiaJaponesa.html">Mitologia Japonesa</a>
+      </div>
     </nav>
-    <main>
-        <section id="griega" class="principal">
-            <h2>Mitología Griega</h2>
-            <p>La mitología griega está llena de historias fascinantes sobre dioses y héroes. Algunos de los dioses más
-                conocidos son Zeus, Atenea, y Apolo.</p>
-            <p>Por ejemplo, Zeus es el dios del cielo y el rey de los dioses, conocido por su poder y su influencia
-                sobre el
-                mundo mortal.</p>
-            <img src="./images/zeus.jpg" class="imagen-principal" alt="Zeus" />
-            
-            <h3 id="Introduccion">Introducción </h3>
-            <p class="intro2">
-                La mitología griega es un conjunto de relatos, creencias y tradiciones transmitidas por los antiguos griegos a lo largo de los siglos. Estos mitos buscaban explicar la creación del mundo, el origen de los dioses y la naturaleza del universo, además de ofrecer enseñanzas morales y justificar costumbres y rituales. La mitología se convirtió en una parte fundamental de la identidad cultural griega, influyendo en su arte, literatura, religión y política. <br> <br>
+  </header>
 
-                Los mitos griegos comenzaron como narraciones orales transmitidas de generación en generación. Con el tiempo, fueron recopilados y registrados en diversas obras literarias, entre las que destacan los poemas épicos de Homero, "La Ilíada" y "La Odisea", así como "La Teogonía" y "Los Trabajos y los Días" de Hesíodo. Además de estos textos, las tragedias de Esquilo, Sófocles y Eurípides, así como las obras de historiadores como Heródoto y geógrafos como Pausanias, ayudaron a consolidar y difundir la mitología griega a lo largo de los siglos.
-                
-            <h4>Orígenes y evolución de los mitos</h4>
-                
-                La mitología griega tiene raíces en antiguas tradiciones indoeuropeas y comparte similitudes con los mitos de otras civilizaciones mediterráneas y mesopotámicas. En sus inicios, los mitos griegos eran relatos simples que explicaban fenómenos naturales como los rayos, el mar tempestuoso o la sucesión de las estaciones. Con el tiempo, estos relatos se expandieron y complejizaron, dando origen a una estructura mitológica rica en detalles, personajes y conexiones entre dioses, héroes y mortales. <br><br>
-                
-                Uno de los aspectos más fascinantes de la mitología griega es su evolución a lo largo de los siglos. En sus primeras etapas, los relatos estaban profundamente ligados a las prácticas religiosas y a la adoración de los dioses en templos y santuarios. Sin embargo, con el desarrollo del pensamiento filosófico y el auge de la civilización griega, los mitos comenzaron a reinterpretarse desde un enfoque más racional y simbólico. Filósofos como Platón y Aristóteles debatieron sobre la veracidad de los mitos y su utilidad en la educación moral de los ciudadanos. Posteriormente, los romanos adoptarían y adaptarían muchos de estos mitos dentro de su propia cultura, fusionando elementos griegos con sus propias creencias.
-                
-                <h4>El papel de los dioses y héroes en la sociedad griega</h4>
-                
-                Los dioses desempeñaban un papel central en la vida cotidiana de los griegos. Eran vistos como seres poderosos pero con emociones y defectos humanos. Los griegos les ofrecían sacrificios, oraciones y festivales para ganarse su favor o evitar su ira. Cada ciudad-estado tenía una deidad principal como protectora, siendo Atenea la patrona de Atenas, Apolo de Delfos y Artemisa de Éfeso. <br>
-                
-                Además de los dioses, los héroes desempeñaban un papel fundamental en la mitología griega. Eran figuras semidivinas, descendientes de dioses y mortales, cuyas hazañas y aventuras inspiraban a la sociedad. Historias como las de Heracles, Teseo, Perseo y Aquiles servían como ejemplos de coraje, astucia y sacrificio. <br><br>
-                
-                A lo largo del tiempo, la mitología griega influyó en innumerables aspectos de la civilización occidental. Sus relatos han sido fuente de inspiración para la literatura, la escultura, la pintura y el cine. Hoy en día, los mitos griegos siguen siendo estudiados y reinterpretados en la cultura popular, demostrando su impacto perdurable en la humanidad.
-            </p>
-            <p>
-                <h3 id="Dioses">Principales Dioses y Diosas</h3>
-                <p>Los dioses griegos eran antropomórficos y poseían características humanas, con virtudes y defectos. Entre los más importantes destacan:</p>
+  <main>
 
-                <section class="fotos-dioses">    
-                    <p class="primero"><b>Zeus:</b> Dios del cielo y el trueno, rey del Olimpo. Hijo de Cronos y Rea, Zeus lideró la rebelión de los dioses olímpicos contra los titanes, liberando a sus hermanos y estableciendo su dominio en el Monte Olimpo. Es conocido por sus múltiples amoríos con diosas y mortales, lo que dio origen a numerosos semidioses como Heracles y Perseo. Su arma principal es el rayo, y es representado como un hombre maduro con barba y un cetro.
-                    <img src="./images/zeus.jpg" alt="Zeus"></p>
-                
-                    <p><b>Hera:</b> Diosa del matrimonio y la familia, esposa de Zeus. Aunque es la reina del Olimpo, su matrimonio con Zeus estuvo marcado por la infidelidad de su esposo, lo que la llevó a tomar venganza contra sus amantes y sus hijos ilegítimos. Era la protectora de las mujeres casadas y castigó duramente a figuras como Heracles y Leto. Su símbolo es el pavo real y es representada con una diadema y un cetro.
-                    <img src="./images/zeus.jpg" alt="Zeus"></p>
-                
-                    <p><b>Poseidón:</b> Dios del mar y los terremotos. Hermano de Zeus y Hades, Poseidón gobernaba los océanos desde su palacio submarino. Era una deidad temperamental, capaz de calmar o desatar tormentas. Creó al caballo y tuvo numerosos descendientes, incluyendo al cíclope Polifemo. Su símbolo es el tridente, con el que podía sacudir la tierra y crear terremotos.
-                    <img src="./images/zeus.jpg" alt="Zeus"></p>
-                
-                    <p><b>Hades:</b> Dios del inframundo y los muertos. A diferencia de su hermano Zeus, Hades no residía en el Olimpo, sino en el inframundo, donde gobernaba a las almas de los difuntos. Secuestró a Perséfone, lo que dio origen al mito de las estaciones. Aunque temido, no era considerado un dios maligno, sino justo en su papel de juez de los muertos. Su casco de invisibilidad, forjado por los cíclopes, le permitía moverse sin ser visto.
-                    <img src="./images/zeus.jpg" alt="Zeus"></p>
-                
-                    <p><b>Atenea:</b>  Diosa de la sabiduría y la estrategia militar. Nació completamente armada de la cabeza de Zeus tras haber sido tragada por su padre en el vientre de Metis. Es una de las diosas vírgenes y protectora de Atenas, ciudad que lleva su nombre. Su símbolo es el búho y la égida, y era conocida por su apoyo a héroes como Odiseo y Perseo.
-                    <img src="./images/zeus.jpg" alt="Zeus"></p>
-                
-                    <p><b>Apolo:</b> Dios del sol, la música, la poesía y la profecía. Hijo de Zeus y Leto, su nacimiento fue complicado debido a la persecución de Hera. Como dios de la luz y la verdad, tenía el oráculo de Delfos, donde los mortales buscaban respuestas divinas. También era arquero y líder de las Musas. Se le representaba con una lira y una corona de laurel.
-                    <img src="./images/zeus.jpg" alt="Zeus"></p>
-                
-                    <p><b>Artemisa:</b> Diosa de la caza, la virginidad y la naturaleza salvaje. Hermana gemela de Apolo, Artemisa protegía a las criaturas del bosque y castigaba a quienes las dañaban. Fue una diosa vengativa, como lo demuestra su castigo a Acteón, quien la vio bañarse y fue transformado en ciervo. Se le representa con un arco y flechas.
-                    <img src="./images/zeus.jpg" alt="Zeus"></p>
-                
-                    <p><b>Afrodita:</b> Diosa del amor, la belleza y el deseo. Según una versión del mito, nació de la espuma del mar tras la castración de Urano. En otra, es hija de Zeus y Dione. Casada con Hefesto, tuvo numerosos amantes, entre ellos Ares y Adonis. Era la patrona del amor y la fertilidad y se le asociaba con la paloma y la concha marina.
-                    <img src="./images/zeus.jpg" alt="Zeus"></p>
-                
-                    <p><b>Ares:</b> Dios de la guerra y la violencia. Hijo de Zeus y Hera, Ares representaba la brutalidad del combate y el caos del campo de batalla. A diferencia de Atenea, que simbolizaba la estrategia militar, Ares encarnaba la destrucción y el derramamiento de sangre. Fue amante de Afrodita y tuvo varios hijos con ella. Se le representa con armadura y una lanza.
-                    <img src="./images/zeus.jpg" alt="Zeus"></p>
-                
-                    <p><b>Dionisio:</b> Dios del vino, la locura y el éxtasis. Hijo de Zeus y Sémele, su nacimiento fue trágico, ya que su madre murió al ver la verdadera forma de Zeus. Fue criado por ninfas y se convirtió en una deidad festiva, promoviendo el vino y los misterios dionisíacos. Se le representa con una copa de vino y una corona de hiedra.
-                    <img src="./images/zeus.jpg" alt="Zeus"></p>
-                
-                    <p><b>Hermes:</b> Mensajero de los dioses, protector de viajeros y comerciantes. Hijo de Zeus y Maya, Hermes era conocido por su astucia y rapidez. Fue el creador de la lira y ayudó a muchas figuras mitológicas, incluyendo a Perseo en su misión contra Medusa. Se le representa con sandalias aladas y un caduceo.
-                    <img src="./images/zeus.jpg" alt="Zeus"></p>
-                </section>
-            </p>
-            <p>
-            <h3 id="CriaturasYSeres">Criaturas y Seres Mitologicos </h3>
-            Los mitos griegos están llenos de seres fantásticos, como: <br>
-            <section class="fotos-criaturas">
-                <p>Minotauro: Mitad hombre, mitad toro, habitante del laberinto de Creta.
-                <img src="./images/zeus.jpg" alt="Zeus"></p>
-                <p>Cíclopes: Gigantes de un solo ojo, forjadores de las armas divinas.
-                <img src="./images/zeus.jpg" alt="Zeus"></p>
-                <p>Medusa: Gorgona con serpientes en la cabeza, capaz de petrificar con la mirada.
-                <img src="./images/zeus.jpg" alt="Zeus"></p>
-                
-            <p>Quimera: Criatura con cabeza de león, cuerpo de cabra y cola de serpiente.</p>
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="header" src="../images/pruebaa.png" alt="">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Mitologias del Mundo.</h1>
+              <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="header" src="../images/pruebaa.png" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Mitologias del Mundo.</h1>
+              <p>Some representative placeholder content for the second slide of the carousel.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="header" src="../images/pruebaa.png" alt="">
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Mitologias del Mundo.</h1>
+              <p>Some representative placeholder content for the third slide of this carousel.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-            Hidra de Lerna: Serpiente de múltiples cabezas que se regeneraban al ser cortadas. <br>
 
-            Pegaso: Caballo alado nacido de la sangre de Medusa.
-            </section>
-            </p>
-            <p>
-            <h3 id="HeroesYLeyendas">Heroes y Leyendas</h3>
-            La mitología griega es una de las más influyentes de la historia, con relatos que explican el origen del
-            mundo, la vida y la naturaleza humana. Basada en un vasto panteón de dioses olímpicos liderados por
-            Zeus,
-            estas historias fueron plasmadas en obras como la Ilíada y la Odisea. Los griegos creían en la
-            intervención
-            de los dioses en los asuntos humanos y en la existencia de criaturas legendarias, héroes épicos y
-            relatos
-            que dieron forma a su cosmovisión.
-            </p>
-            <p>
-            <h3 id="MitosYRelatos">Mitos y Relatos</h3>
-            La mitología griega es una de las más influyentes de la historia, con relatos que explican el origen del
-            mundo, la vida y la naturaleza humana. Basada en un vasto panteón de dioses olímpicos liderados por
-            Zeus,
-            estas historias fueron plasmadas en obras como la Ilíada y la Odisea. Los griegos creían en la
-            intervención
-            de los dioses en los asuntos humanos y en la existencia de criaturas legendarias, héroes épicos y
-            relatos
-            que dieron forma a su cosmovisión.
-            </p>
-            <p>
-            <h3 id="SimbolosYArtefactos">Simbolos y Artefactos Sagrados</h3>
-            La mitología griega es una de las más influyentes de la historia, con relatos que explican el origen del
-            mundo, la vida y la naturaleza humana. Basada en un vasto panteón de dioses olímpicos liderados por
-            Zeus,
-            estas historias fueron plasmadas en obras como la Ilíada y la Odisea. Los griegos creían en la
-            intervención
-            de los dioses en los asuntos humanos y en la existencia de criaturas legendarias, héroes épicos y
-            relatos
-            que dieron forma a su cosmovisión.
-            </p>
-            <p>
-            <h3 id="LugaresYCosmologia">Lugares Miticos y Cosmología</h3>
-            La mitología griega es una de las más influyentes de la historia, con relatos que explican el origen del
-            mundo, la vida y la naturaleza humana. Basada en un vasto panteón de dioses olímpicos liderados por
-            Zeus,
-            estas historias fueron plasmadas en obras como la Ilíada y la Odisea. Los griegos creían en la
-            intervención
-            de los dioses en los asuntos humanos y en la existencia de criaturas legendarias, héroes épicos y
-            relatos
-            que dieron forma a su cosmovisión.
-            </p>
-            <p>
-            <h3 id="HeroesYLeyendas">Influencia en la Cultura Actual</h3>
-            La mitología griega es una de las más influyentes de la historia, con relatos que explican el origen del
-            mundo, la vida y la naturaleza humana. Basada en un vasto panteón de dioses olímpicos liderados por
-            Zeus,
-            estas historias fueron plasmadas en obras como la Ilíada y la Odisea. Los griegos creían en la
-            intervención
-            de los dioses en los asuntos humanos y en la existencia de criaturas legendarias, héroes épicos y
-            relatos
-            que dieron forma a su cosmovisión.
-            </p>
-        </section>
-        <aside class="sidebar">
-            <h3>Artículos Recientes</h3>
-            <ul>
-                <li><a href="#Introduccion">La influencia de la mitología en la cultura popular</a></li>
-                <li><a href="#">Los dioses y héroes de la mitología griega</a></li>
-                <li><a href="#">Los mitos nórdicos y su impacto en la literatura</a></li>
-                <li><a href="#">La mitología egipcia y sus misterios</a></li>
-                <li><a href="#">Los dioses romanos y su legado en la historia</a></li>
-            </ul>
+    <!-- Marketing messaging and featurettes
+  ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-        </aside>
-    </main>
-    <footer>
-        <p class="pie-pagina">&copy; 2025 Mitología del Mundo. Todos los derechos reservados.</p>
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      
+
+
+      <!-- START THE FEATURETTES -->
+      <h2>Introduccion</h2>
+      <p class="intro2">
+        La mitología griega es un conjunto de relatos, creencias y tradiciones transmitidas por los antiguos griegos a
+        lo largo de los siglos. Estos mitos buscaban explicar la creación del mundo, el origen de los dioses y la
+        naturaleza del universo, además de ofrecer enseñanzas morales y justificar costumbres y rituales. La mitología
+        se convirtió en una parte fundamental de la identidad cultural griega, influyendo en su arte, literatura,
+        religión y política. <br> <br>
+
+        Los mitos griegos comenzaron como narraciones orales transmitidas de generación en generación. Con el tiempo,
+        fueron recopilados y registrados en diversas obras literarias, entre las que destacan los poemas épicos de
+        Homero, "La Ilíada" y "La Odisea", así como "La Teogonía" y "Los Trabajos y los Días" de Hesíodo. Además de
+        estos textos, las tragedias de Esquilo, Sófocles y Eurípides, así como las obras de historiadores como Heródoto
+        y geógrafos como Pausanias, ayudaron a consolidar y difundir la mitología griega a lo largo de los siglos. <br>
+
+      <h4>Orígenes y evolución de los mitos</h4>
+
+      La mitología griega tiene raíces en antiguas tradiciones indoeuropeas y comparte similitudes con los mitos de
+      otras civilizaciones mediterráneas y mesopotámicas. En sus inicios, los mitos griegos eran relatos simples que
+      explicaban fenómenos naturales como los rayos, el mar tempestuoso o la sucesión de las estaciones. Con el tiempo,
+      estos relatos se expandieron y complejizaron, dando origen a una estructura mitológica rica en detalles,
+      personajes y conexiones entre dioses, héroes y mortales. <br><br>
+
+      Uno de los aspectos más fascinantes de la mitología griega es su evolución a lo largo de los siglos. En sus
+      primeras etapas, los relatos estaban profundamente ligados a las prácticas religiosas y a la adoración de los
+      dioses en templos y santuarios. Sin embargo, con el desarrollo del pensamiento filosófico y el auge de la
+      civilización griega, los mitos comenzaron a reinterpretarse desde un enfoque más racional y simbólico. Filósofos
+      como Platón y Aristóteles debatieron sobre la veracidad de los mitos y su utilidad en la educación moral de los
+      ciudadanos. Posteriormente, los romanos adoptarían y adaptarían muchos de estos mitos dentro de su propia cultura,
+      fusionando elementos griegos con sus propias creencias.
+      <br><br>
+
+      <h4>El papel de los dioses y héroes en la sociedad griega</h4>
+
+      Los dioses desempeñaban un papel central en la vida cotidiana de los griegos. Eran vistos como seres poderosos
+      pero con emociones y defectos humanos. Los griegos les ofrecían sacrificios, oraciones y festivales para ganarse
+      su favor o evitar su ira. Cada ciudad-estado tenía una deidad principal como protectora, siendo Atenea la patrona
+      de Atenas, Apolo de Delfos y Artemisa de Éfeso. <br>
+
+      Además de los dioses, los héroes desempeñaban un papel fundamental en la mitología griega. Eran figuras
+      semidivinas, descendientes de dioses y mortales, cuyas hazañas y aventuras inspiraban a la sociedad. Historias
+      como las de Heracles, Teseo, Perseo y Aquiles servían como ejemplos de coraje, astucia y sacrificio. <br><br>
+
+      A lo largo del tiempo, la mitología griega influyó en innumerables aspectos de la civilización occidental. Sus
+      relatos han sido fuente de inspiración para la literatura, la escultura, la pintura y el cine. Hoy en día, los
+      mitos griegos siguen siendo estudiados y reinterpretados en la cultura popular, demostrando su impacto perdurable
+      en la humanidad.
+      </p>
+
+      <hr class="featurette-divider">
+      <p>
+      <h3 id="Dioses">Principales Dioses y Diosas</h3>
+      <p>Los dioses griegos eran antropomórficos y poseían características humanas, con virtudes y defectos. Entre los
+        más importantes destacan:
+      </p>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+            </svg>
+            <h2 class="fw-normal">Zeus</h2>
+            <p>Dios del cielo y el trueno, rey del Olimpo. Hijo de Cronos y Rea, lideró la rebelión contra los titanes y estableció su dominio sobre dioses y mortales. Conocido por sus múltiples amoríos, engendró a muchos héroes y dioses. Su símbolo es el rayo, y se le representa como un hombre maduro con barba y un cetro.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+            </svg>
+            <h2 class="fw-normal">Hera</h2>
+            <p>Diosa del matrimonio y la familia, esposa de Zeus. Famosa por su carácter vengativo, perseguía a las amantes de su esposo y a sus hijos ilegítimos. Era protectora de las mujeres casadas y la reina del Olimpo. Su símbolo es el pavo real, y se le representa con una diadema y un cetro.
+            </p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+            </svg>
+            <h2 class="fw-normal">Poseidon</h2>
+            <p>Dios del mar y los terremotos, hermano de Zeus y Hades. Gobernaba los océanos desde su palacio submarino y podía calmar o desatar tormentas a voluntad. Creó al caballo y tuvo numerosos descendientes, incluyendo al cíclope Polifemo. Su símbolo es el tridente.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+            </svg>
+            <h2 class="fw-normal">Hades</h2>
+            <p>Dios del inframundo y los muertos, hermano mayor de Zeus y Poseidón. Gobernaba el reino de los difuntos y rara vez salía de él. Raptó a Perséfone para convertirla en su esposa, lo que originó el mito de las estaciones. Su casco de invisibilidad le permitía moverse sin ser visto.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+            </svg>
+            <h2 class="fw-normal">Atenea</h2>
+            <p> Diosa de la sabiduría y la estrategia militar. Nació armada de la cabeza de Zeus tras haber sido tragada en el vientre de Metis. Protectora de Atenas y los héroes, apoyó a Odiseo y Perseo. Su símbolo es el búho, y se le representa con la égida y una lanza.
+            </p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+            </svg>
+            <h2 class="fw-normal">Apolo</h2>
+            <p>Dios del sol, la música, la poesía y la profecía. Hijo de Zeus y Leto, poseía el oráculo de Delfos y guiaba a los humanos con su sabiduría. También era un arquero letal y patrón de las artes. Se le representa con una lira y una corona de laurel.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+            </svg>
+            <h2 class="fw-normal">Artemisa</h2>
+            <p>Diosa de la caza, la virginidad y la naturaleza salvaje. Hermana gemela de Apolo, protegía a los animales y castigaba a quienes los dañaban. Defendía su pureza con ferocidad y ayudaba en los partos. Se le representa con un arco y flechas.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+            </svg>
+            <h2 class="fw-normal">Afrodita</h2>
+            <p>Diosa del amor, la belleza y el deseo. Nació de la espuma del mar tras la castración de Urano o, según otra versión, era hija de Zeus y Dione. Casada con Hefesto, tuvo numerosos amantes, entre ellos Ares. Su símbolo es la paloma, y se le representa con una concha marina.
+            </p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+            </svg>
+            <h2 class="fw-normal">Ares</h2>
+            <p>Dios de la guerra y la violencia. Hijo de Zeus y Hera, encarnaba la brutalidad del combate y el caos del campo de batalla. Amante de Afrodita, tuvo varios hijos con ella. Se le representa con armadura, casco y una lanza.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+            </svg>
+            <h2 class="fw-normal">Dionisio</h2>
+            <p>Dios del vino, la locura y el éxtasis. Hijo de Zeus y Sémele, fue criado por ninfas tras la muerte de su madre. Introdujo la viticultura y los misterios dionisíacos, promoviendo la alegría y el frenesí. Se le representa con una copa de vino y una corona de hiedra.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+            </svg>
+            <h2 class="fw-normal">Hermes</h2>
+            <p>Dios mensajero, protector de viajeros, comerciantes y ladrones. Hijo de Zeus y Maya, era astuto y veloz, con sandalias aladas que le permitían moverse entre mundos. Inventó la lira y ayudó a héroes como Perseo. Su símbolo es el caduceo.
+            </p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+            </svg>
+            <h2 class="fw-normal">Hefesto</h2>
+            <p>Dios del fuego, la forja y la metalurgia. Hijo de Hera, aunque algunas versiones dicen que también era hijo de Zeus, Hefesto nació con una deformidad y fue arrojado del Olimpo por su madre. </p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div>
+      <hr class="featurette-divider">
+      <p>
+      <h3 id="CriaturasYSeres">Criaturas y Seres Mitologicos </h3>
+      Los mitos griegos están llenos de seres fantásticos, como: <br>
+      <section class="fotos-criaturas">
+        <p>Minotauro: Mitad hombre, mitad toro, habitante del laberinto de Creta.
+          <img src="./images/zeus.jpg" alt="Zeus">
+        </p>
+        <p>Cíclopes: Gigantes de un solo ojo, forjadores de las armas divinas.
+          <img src="./images/zeus.jpg" alt="Zeus">
+        </p>
+        <p>Medusa: Gorgona con serpientes en la cabeza, capaz de petrificar con la mirada.
+          <img src="./images/zeus.jpg" alt="Zeus">
+        </p>
+
+        <p>Quimera: Criatura con cabeza de león, cuerpo de cabra y cola de serpiente.</p>
+
+        Hidra de Lerna: Serpiente de múltiples cabezas que se regeneraban al ser cortadas. <br>
+
+        Pegaso: Caballo alado nacido de la sangre de Medusa.
+      </section>
+      </p>
+      <hr class="featurette-divider">
+      <p>
+      <h3 id="HeroesYLeyendas">Heroes y Leyendas</h3>
+      La mitología griega es una de las más influyentes de la historia, con relatos que explican el origen del
+      mundo, la vida y la naturaleza humana. Basada en un vasto panteón de dioses olímpicos liderados por
+      Zeus,
+      estas historias fueron plasmadas en obras como la Ilíada y la Odisea. Los griegos creían en la
+      intervención
+      de los dioses en los asuntos humanos y en la existencia de criaturas legendarias, héroes épicos y
+      relatos
+      que dieron forma a su cosmovisión.
+      </p>
+      <hr class="featurette-divider">
+      <p>
+      <h3 id="MitosYRelatos">Mitos y Relatos</h3>
+      La mitología griega es una de las más influyentes de la historia, con relatos que explican el origen del
+      mundo, la vida y la naturaleza humana. Basada en un vasto panteón de dioses olímpicos liderados por
+      Zeus,
+      estas historias fueron plasmadas en obras como la Ilíada y la Odisea. Los griegos creían en la
+      intervención
+      de los dioses en los asuntos humanos y en la existencia de criaturas legendarias, héroes épicos y
+      relatos
+      que dieron forma a su cosmovisión.
+      </p>
+      <hr class="featurette-divider">
+      <p>
+      <h3 id="SimbolosYArtefactos">Simbolos y Artefactos Sagrados</h3>
+      La mitología griega es una de las más influyentes de la historia, con relatos que explican el origen del
+      mundo, la vida y la naturaleza humana. Basada en un vasto panteón de dioses olímpicos liderados por
+      Zeus,
+      estas historias fueron plasmadas en obras como la Ilíada y la Odisea. Los griegos creían en la
+      intervención
+      de los dioses en los asuntos humanos y en la existencia de criaturas legendarias, héroes épicos y
+      relatos
+      que dieron forma a su cosmovisión.
+      </p>
+      <hr class="featurette-divider">
+      <p>
+      <h3 id="LugaresYCosmologia">Lugares Miticos y Cosmología</h3>
+      La mitología griega es una de las más influyentes de la historia, con relatos que explican el origen del
+      mundo, la vida y la naturaleza humana. Basada en un vasto panteón de dioses olímpicos liderados por
+      Zeus,
+      estas historias fueron plasmadas en obras como la Ilíada y la Odisea. Los griegos creían en la
+      intervención
+      de los dioses en los asuntos humanos y en la existencia de criaturas legendarias, héroes épicos y
+      relatos
+      que dieron forma a su cosmovisión.
+      </p>
+      <hr class="featurette-divider">
+      <p>
+      <h3 id="HeroesYLeyendas">Influencia en la Cultura Actual</h3>
+      La mitología griega es una de las más influyentes de la historia, con relatos que explican el origen del
+      mundo, la vida y la naturaleza humana. Basada en un vasto panteón de dioses olímpicos liderados por
+      Zeus,
+      estas historias fueron plasmadas en obras como la Ilíada y la Odisea. Los griegos creían en la
+      intervención
+      de los dioses en los asuntos humanos y en la existencia de criaturas legendarias, héroes épicos y
+      relatos
+      que dieron forma a su cosmovisión.
+      </p>
+
+
+
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
     </footer>
+  </main>
+  <script src="../dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
