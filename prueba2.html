@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Personajes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .character-card {
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        .character-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+        .dropdown {
+            width: 300px;
+        }
+        .dropdown select {
+            width: 100%;
+            padding: 10px;
+        }
+        .dropdown-content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .flip-card {
+            width: 250px;
+            height: 350px;
+            perspective: 1000px;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        .flip-card-front {
+            background: #f4f4f4;
+            text-align: center;
+        }
+        .flip-card-back {
+            background: #333;
+            color: white;
+            transform: rotateY(180deg);
+            text-align: center;
+            padding: 20px;
+        }
+        .tabs {
+            width: 100%;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .tab-buttons button {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .tab-content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tarjetas en Grid -->
+    <div class="grid-container">
+        <div class="character-card">
+            <img src="imagen1.jpg" alt="Personaje 1">
+            <h3>Personaje 1</h3>
+            <p>Descripción breve...</p>
+        </div>
+        <div class="character-card">
+            <img src="imagen2.jpg" alt="Personaje 2">
+            <h3>Personaje 2</h3>
+            <p>Descripción breve...</p>
+        </div>
+    </div>
+    
+    <!-- Dropdown -->
+    <div class="dropdown">
+        <select onchange="showDropdownContent(this.value)">
+            <option value="">Selecciona un personaje</option>
+            <option value="1">Personaje 1</option>
+            <option value="2">Personaje 2</option>
+        </select>
+        <div id="dropdown-1" class="dropdown-content">Descripción de Personaje 1</div>
+        <div id="dropdown-2" class="dropdown-content">Descripción de Personaje 2</div>
+    </div>
+    
+    <!-- Tarjeta con efecto Flip -->
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h3>Personaje</h3>
+                <img src="imagen.jpg" alt="Personaje">
+            </div>
+            <div class="flip-card-back">
+                <p>Descripción del personaje
+                    de manera existencial...
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab-buttons">
+            <button onclick="showTab('mitologia-griega')">Griega</button>
+            <button onclick="showTab('mitologia-nordica')">Nórdica</button>
+        </div>
+        <div id="mitologia-griega" class="tab-content active">
+            <p>Personajes de la mitología griega...</p>
+        </div>
+        <div id="mitologia-nordica" class="tab-content">
+            <p>Personajes de la mitología nórdica...</p>
+        </div>
+    </div>
+    
+    <script>
+        function showDropdownContent(value) {
+            document.querySelectorAll('.dropdown-content').forEach(el => el.style.display = 'none');
+            if (value) {
+                document.getElementById('dropdown-' + value).style.display = 'block';
+            }
+        }
+
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>

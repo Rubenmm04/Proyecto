@@ -15,3 +15,10 @@ body{
     transform: scale(1.05);
     transition: transform 0.5s;
 }
+.texto-cabecera {
+    background-color: #00000085;
+    text-align: center;
+    width: 35%;
+    margin: auto;
+    
+}

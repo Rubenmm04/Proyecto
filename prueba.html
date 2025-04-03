@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Personajes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .character-card {
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        .character-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .accordion {
+            width: 300px;
+        }
+        .accordion-item {
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+        }
+        .accordion-title {
+            background: #f4f4f4;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .accordion-content {
+            display: none;
+            padding: 10px;
+        }
+        .carousel-container {
+            position: relative;
+            width: 300px;
+            overflow: hidden;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel img {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev-btn {
+            left: 10px;
+        }
+        .next-btn {
+            right: 10px;
+        }
+        .hover-card {
+            width: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hover-card img {
+            width: 100%;
+        }
+        .hover-card .description {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            width: 100%;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        .hover-card:hover .description {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Tarjeta de personaje -->
+    <div class="character-card">
+        <img src="./images/zeus.jpg" alt="Nombre del personaje">
+        <h3>Nombre del personaje</h3>
+        <p>Breve descripción del personaje...</p>
+    </div>
+
+    <!-- Acordeón -->
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title" onclick="toggleAccordion(this)">Nombre del personaje</div>
+            <div class="accordion-content">Descripción del personaje que hagas...</div>
+        </div>
+    </div>
+
+    <!-- Carrusel funcional -->
+    <div class="carousel-container">
+        <button class="carousel-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="carousel">
+            <img src="./images/forto-prueba.png" alt="Personaje 1">
+            <img src="./images/Osiris.jpg" alt="Personaje 2">
+            <img src="./images/zeus.jpg" alt="Personaje 3">
+        </div>
+        <button class="carousel-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    
+    <!-- Tarjeta con efecto hover -->
+    <div class="hover-card">
+        <img src="./images/zeus.jpg" alt="Personaje">
+        <div class="description">Breve descripción del personaje...</div>
+    </div>
+    
+    <script>
+        function toggleAccordion(element) {
+            let content = element.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+
+        let currentIndex = 0;
+        function moveSlide(direction) {
+            const carousel = document.querySelector(".carousel");
+            const images = document.querySelectorAll(".carousel img");
+            const totalImages = images.length;
+            
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = totalImages - 1;
+            } else if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            }
+            
+            carousel.style.transform = `translateX(-${currentIndex * 300}px)`;
+        }
+    </script>
+</body>
+</html>
