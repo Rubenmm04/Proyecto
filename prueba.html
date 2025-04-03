@@ -3,149 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplos de Personajes</title>
+    <title>Personajes de Mitología</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-wrap: wrap;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mitologia {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dos o más columnas dependiendo del ancho */
             gap: 20px;
-            justify-content: center;
             padding: 20px;
+            justify-items: center;
         }
-        .character-card {
-            width: 250px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 10px;
+
+        .personaje {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-        }
-        .character-card img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .accordion {
-            width: 300px;
-        }
-        .accordion-item {
-            border: 1px solid #ccc;
-            margin-bottom: 5px;
-        }
-        .accordion-title {
-            background: #f4f4f4;
-            padding: 10px;
-            cursor: pointer;
-        }
-        .accordion-content {
-            display: none;
-            padding: 10px;
-        }
-        .carousel-container {
-            position: relative;
-            width: 300px;
-            overflow: hidden;
-        }
-        .carousel {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        .carousel img {
-            width: 300px;
-            flex-shrink: 0;
-        }
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-        .prev-btn {
-            left: 10px;
-        }
-        .next-btn {
-            right: 10px;
-        }
-        .hover-card {
-            width: 250px;
-            position: relative;
-            overflow: hidden;
-        }
-        .hover-card img {
             width: 100%;
         }
-        .hover-card .description {
-            position: absolute;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
+
+        .imagen-personaje {
             width: 100%;
-            padding: 10px;
-            transform: translateY(100%);
-            transition: transform 0.3s;
+            height: auto;
+            border-radius: 8px;
         }
-        .hover-card:hover .description {
-            transform: translateY(0);
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1em;
+            color: #555;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- Tarjeta de personaje -->
-    <div class="character-card">
-        <img src="./images/zeus.jpg" alt="Nombre del personaje">
-        <h3>Nombre del personaje</h3>
-        <p>Breve descripción del personaje...</p>
-    </div>
 
-    <!-- Acordeón -->
-    <div class="accordion">
-        <div class="accordion-item">
-            <div class="accordion-title" onclick="toggleAccordion(this)">Nombre del personaje</div>
-            <div class="accordion-content">Descripción del personaje que hagas...</div>
+    <div class="mitologia">
+        <div class="personaje">
+            <img src="https://via.placeholder.com/300x200?text=Zeus" alt="Zeus" class="imagen-personaje">
+            <h3>Zeus</h3>
+            <p>Zeus es el rey de los dioses en la mitología griega, dios del cielo y el trueno. Gobernaba el monte Olimpo y tenía el poder de lanzar rayos.</p>
+        </div>
+
+        <div class="personaje">
+            <img src="https://via.placeholder.com/300x200?text=Thor" alt="Thor" class="imagen-personaje">
+            <h3>Thor</h3>
+            <p>Thor es un dios de la mitología nórdica, asociado al trueno, el relámpago y la guerra. Su martillo, Mjölnir, es su arma más poderosa.</p>
+        </div>
+
+        <div class="personaje">
+            <img src="https://via.placeholder.com/300x200?text=Ra" alt="Ra" class="imagen-personaje">
+            <h3>Ra</h3>
+            <p>Ra es el dios del sol en la mitología egipcia, considerado el creador del universo y la fuente de la vida.</p>
+        </div>
+
+        <div class="personaje">
+            <img src="https://via.placeholder.com/300x200?text=Amaterasu" alt="Amaterasu" class="imagen-personaje">
+            <h3>Amaterasu</h3>
+            <p>Amaterasu es la diosa del sol en la mitología japonesa, una de las deidades más importantes del sintoísmo.</p>
+        </div>
+
+        <div class="personaje">
+            <img src="https://via.placeholder.com/300x200?text=Jupiter" alt="Júpiter" class="imagen-personaje">
+            <h3>Júpiter</h3>
+            <p>Júpiter es el dios del cielo y el trueno en la mitología romana, equivalente a Zeus en la mitología griega.</p>
         </div>
     </div>
 
-    <!-- Carrusel funcional -->
-    <div class="carousel-container">
-        <button class="carousel-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
-        <div class="carousel">
-            <img src="./images/forto-prueba.png" alt="Personaje 1">
-            <img src="./images/Osiris.jpg" alt="Personaje 2">
-            <img src="./images/zeus.jpg" alt="Personaje 3">
-        </div>
-        <button class="carousel-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-    
-    <!-- Tarjeta con efecto hover -->
-    <div class="hover-card">
-        <img src="./images/zeus.jpg" alt="Personaje">
-        <div class="description">Breve descripción del personaje...</div>
-    </div>
-    
-    <script>
-        function toggleAccordion(element) {
-            let content = element.nextElementSibling;
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        }
-
-        let currentIndex = 0;
-        function moveSlide(direction) {
-            const carousel = document.querySelector(".carousel");
-            const images = document.querySelectorAll(".carousel img");
-            const totalImages = images.length;
-            
-            currentIndex += direction;
-            if (currentIndex < 0) {
-                currentIndex = totalImages - 1;
-            } else if (currentIndex >= totalImages) {
-                currentIndex = 0;
-            }
-            
-            carousel.style.transform = `translateX(-${currentIndex * 300}px)`;
-        }
-    </script>
 </body>
 </html>
