@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <script src="../assets/js/color-modes.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.122.0">
+  <title>Carousel Template · Bootstrap v5.3</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <link rel="stylesheet" href="./carousel.css">
+  <link rel="stylesheet" href="./carousel.rtl.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./estilos.css">
+
+  <style>
+    .header {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="carousel.css" rel="stylesheet">
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path
+        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path
+        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+      <path
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path
+        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+    </symbol>
+  </svg>
+
+
+
+
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Mitologias del Mundo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Enlaces.html">Link</a>
+            </li>
+            <li>
+              <a class="nav-link" href="./MitologiaGriega.html">Mitologia Griega</a>
+            </li>
+            <li>
+              <a class="nav-link" href="./MitologiaNordica.html">Mitologia Nordica</a>
+            </li>
+            <li>
+              <a class="nav-link" href="./MitologiaEgipcia.html">Mitologia Egipcia</a>
+            </li>
+            <li>
+              <a class="nav-link" href="./MitologiaRomana.html">Mitologia Romana</a>
+            </li>
+            <li>
+              <a class="nav-link" href="./MitologiaJaponesa.html">Mitologia Japonesa</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div>
+      <img class="portada" src="../images/pruebaa.png" alt="">
+      <div class="portada-texto">
+        <h1>Mundos Mitologicos</h1>
+        <p class="p-portada">Explora las fascinantes historias de dioses, héroes y criaturas de las más grandes
+          mitologías del mundo.</p>
+        <button id="btn-portada" onclick="irAIntroduccion()"> Descubrir
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-arrow-down h-8 w-8 text-white/80 cursor-pointer"
+            data-lov-id="src/components/Hero.tsx:60:8" data-lov-name="ArrowDown"
+            data-component-path="src/components/Hero.tsx" data-component-line="60" data-component-file="Hero.tsx"
+            data-component-name="ArrowDown"
+            data-component-content="%7B%22className%22%3A%22h-8%20w-8%20text-white%2F80%20cursor-pointer%22%7D">
+            <path d="M12 5v14"></path>
+            <path d="m19 12-7 7-7-7"></path>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+  ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="contenido">
+        <h3 id="Introduccion">Introducción</h3>
+        <p class="intro">
+          La mitología ha sido una de las fuerzas más poderosas a lo largo de la historia de la humanidad, desempeñando
+          un papel fundamental en la construcción de las civilizaciones. Desde las primeras culturas hasta las más
+          avanzadas, los mitos han servido como una herramienta para dar sentido a lo inexplicable, para ofrecer
+          respuestas a los misterios del cosmos, de la vida, de la muerte y del destino de la humanidad. A través de
+          relatos que se han transmitido de generación en generación, las culturas han intentado explicar el origen del
+          universo, las fuerzas invisibles que lo gobiernan, el papel de los dioses y el profundo significado de la
+          existencia humana. <br> <br>
+
+          Cada mitología es un reflejo del contexto cultural y geográfico en el que nació. Mientras que algunos mitos
+          explican fenómenos naturales o fenómenos cósmicos, otros se enfocan en la moralidad, el honor, el sacrificio o
+          la lucha contra las fuerzas del caos. Sin embargo, a pesar de las diferencias en los detalles, muchos de estos
+          relatos comparten patrones sorprendentes, revelando que todas las culturas han sentido la misma necesidad
+          profunda de buscar respuestas más allá de lo material. Esta necesidad universal de comprender el mundo a
+          través de historias divinas, heroicas y fantásticas ha generado tradiciones que aún hoy siguen vivas,
+          influyendo en la manera en que vemos y comprendemos nuestra realidad. <br><br>
+
+          En esta web, exploraremos algunas de las mitologías más influyentes de la historia: la griega, la nórdica, la
+          egipcia, la romana y la japonesa. Cada una de ellas ha dejado una huella indeleble en la cultura humana, con
+          un panteón único de dioses poderosos, criaturas míticas, héroes extraordinarios y relatos profundamente
+          simbólicos que han perdurado hasta nuestros días. <br><br>
+
+          La mitología griega, por ejemplo, nos introduce en un universo lleno de dioses del Olimpo, cuyos conflictos y
+          pasiones marcaron el destino de los mortales. Héroes como Hércules o Perseo, y criaturas como el Minotauro o
+          las sirenas, se han convertido en iconos eternos que trascienden el tiempo. Por otro lado, la mitología
+          nórdica nos lleva al frío y vasto mundo de los vikingos, donde dioses como Odín y Thor luchan contra fuerzas
+          primordiales, todo en la constante amenaza del Ragnarök, el fin del mundo. <br><br>
+
+          En el antiguo Egipto, los mitos sobre Ra, Osiris, Isis y Anubis daban forma a la relación entre la vida y la
+          muerte, mientras que los faraones eran considerados dioses vivientes, destinados a mantener el orden del
+          universo. En el mundo romano, los mitos se entrelazaron con la historia y la política, creando una conexión
+          entre los dioses y los hechos históricos que determinaron el destino del Imperio Romano. Finalmente, la
+          mitología japonesa, profundamente influenciada por el Shintoísmo, nos revela un mundo donde los kami,
+          espíritus divinos, gobiernan la naturaleza, el sol, el mar y los vientos, creando una armonía entre lo humano
+          y lo divino. <br><br>
+
+          Cada mitología no solo ofrece una visión única del universo, sino que también toca temas universales como la
+          lucha del bien contra el mal, el amor, el sacrificio, el destino y la superación de los desafíos. A lo largo
+          de los siglos, estos mitos han trascendido las fronteras geográficas y temporales, siendo reinterpretados y
+          adaptados en la literatura, el cine, los videojuegos y la cultura popular moderna. Así, el legado de estos
+          mitos continúa vivo, recordándonos que las historias que narramos, aunque nacidas en tiempos antiguos, siguen
+          hablando de las inquietudes, los sueños y las aspiraciones que todos compartimos como seres humanos.
+        </p>
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Mitologia Griega</h2>
+            <p class="lead">Un universo de dioses, héroes y criaturas mitológicas donde el Olimpo es el centro del
+              poder.
+              Zeus,
+              Poseidón, Atenea y otros inmortales protagonizan historias de amor, traición y heroísmo que han
+              perdurado a lo largo de los siglos. <a href="./MitologiaGriega.html">Leer mas...</a></p>
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img class="imagenes-landing" src="../images/zeus.jpg" alt="">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Mitologia Nordica</h2>
+            <p class="lead">Forjada en el frío y la batalla, esta mitología narra la historia de dioses guerreros como
+              Odín y
+              Thor, quienes luchan contra fuerzas caóticas hasta el inevitable Ragnarök, el fin del mundo y su
+              renacimiento.
+              <a href="./MitologiaNordica.html">Leer mas...</a>
+            </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="imagenes-landing" src="../images/thor.jpg" alt="">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Mitologia Egipcia</h2>
+            <p class="lead">Los antiguos egipcios creían en muchos dioses y diosas, siendo Osiris el dios de la
+              resurrección y la
+              vida
+              después de la muerte. Isis, su esposa, era la diosa de la magia.
+              <a href="./MitologiaEgipcia.html">Leer mas...</a>
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img class="imagenes-landing" src="../images/Osiris.jpg" alt="">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Mitologia Romana</h2>
+            <p class="lead">Una mitología influenciada por la griega, pero con un fuerte sentido de orden y destino,
+              donde
+              dioses
+              como Júpiter, Marte y Venus regían la vida de los hombres y el destino del Imperio. Sus relatos
+              estaban
+              ligados a la expansión, la guerra y la grandeza de Roma, reflejando la disciplina y el poder de su
+              civilización.
+              <a href="./MitologiaRomana.html">Leer más...</a>
+            </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="imagenes-landing" src="../images/Dioses-Romanos.jpg" alt="">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Mitologia Japonesa</h2>
+            <p class="lead">Basada en la espiritualidad del shintoísmo, esta mitología relata el origen del mundo y la
+              relación entre los dioses kami y los humanos. Historias como la de Amaterasu, la diosa del sol, reflejan
+              su
+              visión del equilibrio natural. <br><a href="./MitologiaJaponesa.html">Leer mas...</a></p>
+          </div>
+          <div class="col-md-5">
+            <img class="imagenes-landing" src="../images/Amaterasu_cave_1.png" alt="">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+      </div><!-- /.container -->
+
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-end"><a href="#">Volver a arriba</a></p>
+      </footer>
+  </main>
+  <script src="../dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function irAIntroduccion() {
+      const seccion = document.getElementById("Introduccion");
+      const offsetTop = seccion.offsetTop - 100; // 100px de espacio arriba
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth"
+      });
+    }
+  </script>
+
+</body>
+
+</html>
