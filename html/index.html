@@ -151,6 +151,21 @@
             <li class="nav-item">
               <a class="nav-link" href="./Enlaces.html">Link</a>
             </li>
+            <li>
+              <a class="nav-link" href="./MitologiaGriega.html">Mitologia Griega</a>
+            </li>
+            <li>
+              <a class="nav-link" href="./MitologiaNordica.html">Mitologia Nordica</a>
+            </li>
+            <li>
+              <a class="nav-link" href="./MitologiaEgipcia.html">Mitologia Egipcia</a>
+            </li>
+            <li>
+              <a class="nav-link" href="./MitologiaRomana.html">Mitologia Romana</a>
+            </li>
+            <li>
+              <a class="nav-link" href="./MitologiaJaponesa.html">Mitologia Japonesa</a>
+            </li>
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -163,53 +178,26 @@
 
   <main>
 
-    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-          aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div>
+      <img class="portada" src="../images/pruebaa.png" alt="">
+      <div class="portada-texto">
+        <h1>Mundos Mitologicos</h1>
+        <p class="p-portada">Explora las fascinantes historias de dioses, héroes y criaturas de las más grandes
+          mitologías del mundo.</p>
+        <button id="btn-portada" onclick="irAIntroduccion()"> Descubrir
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-arrow-down h-8 w-8 text-white/80 cursor-pointer"
+            data-lov-id="src/components/Hero.tsx:60:8" data-lov-name="ArrowDown"
+            data-component-path="src/components/Hero.tsx" data-component-line="60" data-component-file="Hero.tsx"
+            data-component-name="ArrowDown"
+            data-component-content="%7B%22className%22%3A%22h-8%20w-8%20text-white%2F80%20cursor-pointer%22%7D">
+            <path d="M12 5v14"></path>
+            <path d="m19 12-7 7-7-7"></path>
+          </svg>
+        </button>
+
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="header" src="../images/pruebaa.png" alt="">
-          <div class="container">
-            <div class="carousel-caption text-start">
-              <h1>Mitologias del Mundo.</h1>
-              <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="header" src="../images/pruebaa.png" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Mitologias del Mundo.</h1>
-              <p>Some representative placeholder content for the second slide of the carousel.</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="header" src="../images/pruebaa.png" alt="">
-          <div class="container">
-            <div class="carousel-caption text-end">
-              <h1>Mitologias del Mundo.</h1>
-              <p>Some representative placeholder content for the third slide of this carousel.</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
 
 
@@ -221,150 +209,50 @@
 
       <!-- Three columns of text below the carousel -->
       <div class="contenido">
-        <h3>Introducción</h3>
+        <h3 id="Introduccion">Introducción</h3>
         <p class="intro">
-          La mitología es un elemento fundamental en todas las civilizaciones del mundo. A través de relatos
-          transmitidos
-          de generación en generación, las culturas han intentado explicar el origen del universo, el papel de los
-          dioses
-          y la naturaleza de la existencia humana. Aunque cada cultura ha desarrollado su propia mitología, muchas
-          comparten patrones comunes, lo que refleja la necesidad universal de comprender el mundo a través de
-          historias
-          divinas y heroicas.
+          La mitología ha sido una de las fuerzas más poderosas a lo largo de la historia de la humanidad, desempeñando
+          un papel fundamental en la construcción de las civilizaciones. Desde las primeras culturas hasta las más
+          avanzadas, los mitos han servido como una herramienta para dar sentido a lo inexplicable, para ofrecer
+          respuestas a los misterios del cosmos, de la vida, de la muerte y del destino de la humanidad. A través de
+          relatos que se han transmitido de generación en generación, las culturas han intentado explicar el origen del
+          universo, las fuerzas invisibles que lo gobiernan, el papel de los dioses y el profundo significado de la
+          existencia humana. <br> <br>
 
-          A continuación, exploraremos las mitologías más influyentes en la historia de la humanidad: la griega, la
-          nórdica, la egipcia, la romana y la japonesa. Cada una de ellas posee características únicas, con panteones
-          de
-          dioses poderosos, criaturas fantásticas y héroes cuyas hazañas han perdurado a lo largo del tiempo.</p>
+          Cada mitología es un reflejo del contexto cultural y geográfico en el que nació. Mientras que algunos mitos
+          explican fenómenos naturales o fenómenos cósmicos, otros se enfocan en la moralidad, el honor, el sacrificio o
+          la lucha contra las fuerzas del caos. Sin embargo, a pesar de las diferencias en los detalles, muchos de estos
+          relatos comparten patrones sorprendentes, revelando que todas las culturas han sentido la misma necesidad
+          profunda de buscar respuestas más allá de lo material. Esta necesidad universal de comprender el mundo a
+          través de historias divinas, heroicas y fantásticas ha generado tradiciones que aún hoy siguen vivas,
+          influyendo en la manera en que vemos y comprendemos nuestra realidad. <br><br>
 
-        <h3>Mitología Griega</h3>
-        <p class="intro">
+          En esta web, exploraremos algunas de las mitologías más influyentes de la historia: la griega, la nórdica, la
+          egipcia, la romana y la japonesa. Cada una de ellas ha dejado una huella indeleble en la cultura humana, con
+          un panteón único de dioses poderosos, criaturas míticas, héroes extraordinarios y relatos profundamente
+          simbólicos que han perdurado hasta nuestros días. <br><br>
 
-          La mitología griega es una de las más conocidas y estudiadas debido a su influencia en la literatura, el
-          arte y
-          la filosofía occidental. Se originó en la Antigua Grecia y fue transmitida principalmente de forma oral
-          antes de
-          ser registrada en textos como "La Ilíada" y "La Odisea" de Homero, así como "La Teogonía" de Hesíodo.
+          La mitología griega, por ejemplo, nos introduce en un universo lleno de dioses del Olimpo, cuyos conflictos y
+          pasiones marcaron el destino de los mortales. Héroes como Hércules o Perseo, y criaturas como el Minotauro o
+          las sirenas, se han convertido en iconos eternos que trascienden el tiempo. Por otro lado, la mitología
+          nórdica nos lleva al frío y vasto mundo de los vikingos, donde dioses como Odín y Thor luchan contra fuerzas
+          primordiales, todo en la constante amenaza del Ragnarök, el fin del mundo. <br><br>
 
-          Los mitos griegos explicaban la creación del mundo a través de los titanes y los dioses olímpicos, quienes
-          gobernaban distintos aspectos de la naturaleza y la vida humana. Zeus, Poseidón y Hades eran los dioses
-          supremos, mientras que Atenea, Apolo, Artemisa y Afrodita desempeñaban roles cruciales en diversos mitos. La
-          interacción entre dioses y mortales era constante, dando lugar a historias fascinantes como la de Prometeo,
-          el
-          robo del fuego y la guerra de Troya.
+          En el antiguo Egipto, los mitos sobre Ra, Osiris, Isis y Anubis daban forma a la relación entre la vida y la
+          muerte, mientras que los faraones eran considerados dioses vivientes, destinados a mantener el orden del
+          universo. En el mundo romano, los mitos se entrelazaron con la historia y la política, creando una conexión
+          entre los dioses y los hechos históricos que determinaron el destino del Imperio Romano. Finalmente, la
+          mitología japonesa, profundamente influenciada por el Shintoísmo, nos revela un mundo donde los kami,
+          espíritus divinos, gobiernan la naturaleza, el sol, el mar y los vientos, creando una armonía entre lo humano
+          y lo divino. <br><br>
 
-          Los héroes también ocupaban un lugar destacado en la mitología griega. Figuras como Heracles, Perseo y Teseo
-          enfrentaban desafíos épicos y monstruos temibles como la Hidra de Lerna, la Medusa y el Minotauro. Estas
-          historias no solo entretenían, sino que también transmitían valores como la valentía, la astucia y el
-          sacrificio. <br>
+          Cada mitología no solo ofrece una visión única del universo, sino que también toca temas universales como la
+          lucha del bien contra el mal, el amor, el sacrificio, el destino y la superación de los desafíos. A lo largo
+          de los siglos, estos mitos han trascendido las fronteras geográficas y temporales, siendo reinterpretados y
+          adaptados en la literatura, el cine, los videojuegos y la cultura popular moderna. Así, el legado de estos
+          mitos continúa vivo, recordándonos que las historias que narramos, aunque nacidas en tiempos antiguos, siguen
+          hablando de las inquietudes, los sueños y las aspiraciones que todos compartimos como seres humanos.
         </p>
-
-
-        <h3>Mitología Nórdica</h3>
-        <p class="intro">
-
-          La mitología nórdica proviene de los pueblos germánicos del norte de Europa, en particular de los vikingos.
-          Sus
-          relatos fueron preservados en los "Eddas", textos medievales escritos en Islandia. A diferencia de la
-          mitología
-          griega, que presenta un cosmos ordenado, la mitología nórdica describe un universo caótico donde el destino
-          es
-          inmutable y los dioses mismos están condenados a perecer en el Ragnarök, la batalla final.
-
-          El panteón nórdico está dominado por figuras como Odín, el dios supremo asociado con la sabiduría y la
-          guerra;
-          Thor, el dios del trueno y protector de la humanidad; y Loki, un ser astuto y ambiguo, capaz de causar tanto
-          el
-          bien como el mal. Estos dioses habitan en Asgard, mientras que los humanos residen en Midgard y los gigantes
-          en
-          Jotunheim.
-
-          Las criaturas míticas nórdicas incluyen dragones como Fafnir, lobos gigantes como Fenrir y serpientes
-          colosales
-          como Jörmungandr. Los vikingos creían en la importancia de la valentía en la batalla, ya que aquellos que
-          morían
-          con honor eran llevados al Valhalla, donde se preparaban para luchar junto a los dioses en el Ragnarök.</p>
-
-        <h3>Mitología Egipcia</h3>
-        <p class="intro">
-
-          La mitología egipcia es una de las más antiguas y se desarrolló a lo largo de más de 3,000 años. Estaba
-          profundamente entrelazada con la religión y la vida cotidiana del Antiguo Egipto, influenciando sus templos,
-          rituales y creencias sobre la vida después de la muerte.
-
-          Los egipcios creían en un cosmos dividido en tres reinos: la tierra (Egipto), el cielo (donde gobernaba Ra,
-          el
-          dios del sol) y el inframundo (el Duat, gobernado por Osiris). Entre los dioses principales destacan Isis,
-          diosa
-          de la maternidad y la magia; Anubis, el dios con cabeza de chacal encargado de guiar a los muertos; y Seth,
-          el
-          dios del caos y la guerra.
-
-          Uno de los mitos más importantes es el de Osiris, quien fue asesinado y desmembrado por su hermano Seth,
-          pero
-          posteriormente revivido por Isis. Su hijo, Horus, vengó su muerte y estableció el linaje de los faraones.
-          Este
-          relato simbolizaba el ciclo de la vida, la muerte y la resurrección, un concepto central en la religión
-          egipcia.
-
-          Los egipcios también temían y veneraban criaturas como la esfinge y el Ammit, un ser híbrido que devoraba
-          las
-          almas de los impuros en el juicio final.</p>
-
-        <h3>Mitología Romana</h3>
-        <p class="intro">
-
-          La mitología romana tiene una gran influencia de la griega, ya que los romanos adoptaron muchos de sus
-          dioses y
-          mitos, pero les dieron nombres latinos y los incorporaron a su propia cultura. Así, Zeus se convirtió en
-          Júpiter, Hera en Juno, Poseidón en Neptuno y Ares en Marte.
-
-          Sin embargo, los romanos tenían una visión más práctica de la religión y usaban sus mitos para reforzar la
-          grandeza de su imperio. La historia de Rómulo y Remo, por ejemplo, explica el origen mítico de Roma y
-          enfatiza
-          el destino manifiesto de la ciudad como la dominadora del mundo.
-
-          Los dioses romanos estaban asociados a valores como la disciplina, la guerra y la expansión territorial.
-          Marte,
-          el dios de la guerra, era particularmente importante debido al carácter militarista de Roma. Además, los
-          emperadores fueron divinizados tras su muerte, consolidando la conexión entre la religión y el poder
-          político.
-        </p>
-
-        <h3>Mitología Japonesa</h3>
-        <p class="intro">
-
-          La mitología japonesa proviene principalmente del "Kojiki" y el "Nihon Shoki", textos históricos que
-          recopilan
-          los mitos del antiguo Japón. A diferencia de otras mitologías, en la japonesa los dioses, conocidos como
-          "kami",
-          están estrechamente ligados a la naturaleza y al ciclo de la vida.
-
-          El mito de la creación japonesa cuenta cómo los dioses primordiales Izanagi e Izanami formaron el
-          archipiélago
-          japonés. Tras la muerte de Izanami, Izanagi descendió al inframundo (Yomi) y al regresar purificó su cuerpo,
-          dando origen a Amaterasu (diosa del sol), Tsukuyomi (dios de la luna) y Susanoo (dios de las tormentas).
-
-          Amaterasu es la diosa más venerada de Japón, y se cree que los emperadores japoneses son sus descendientes
-          directos. Susanoo, en cambio, es famoso por su lucha contra la serpiente de ocho cabezas Yamata-no-Orochi, a
-          la
-          que derrotó con su espada mágica Kusanagi.
-
-          La mitología japonesa también incluye numerosas criaturas y espíritus, como los yokai, seres sobrenaturales
-          que
-          pueden ser traviesos o peligrosos, y los tengu, guardianes de las montañas con aspecto de aves.</p>
-
-        <h3>Conclusión</h3>
-        <p class="intro">
-
-          Cada mitología ofrece una visión única del universo, con dioses poderosos, héroes valientes y relatos
-          fascinantes que han perdurado hasta la actualidad. Aunque las culturas sean diferentes, sus mitos reflejan
-          una
-          necesidad común de explicar el mundo y darle un sentido trascendental a la existencia humana. Hoy en día,
-          estas
-          historias siguen vivas en la literatura, el cine, los videojuegos y la cultura popular, demostrando su
-          impacto
-          duradero en la civilización humana.</p>
 
 
         <!-- START THE FEATURETTES -->
@@ -468,6 +356,16 @@
       </footer>
   </main>
   <script src="../dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function irAIntroduccion() {
+      const seccion = document.getElementById("Introduccion");
+      const offsetTop = seccion.offsetTop - 100; // 100px de espacio arriba
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth"
+      });
+    }
+  </script>
 
 </body>
 
